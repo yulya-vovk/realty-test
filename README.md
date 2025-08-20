@@ -1,75 +1,69 @@
-# Nuxt Minimal Starter
+# Realty Test — Apartments Listing
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Описание
 
-## Setup
+Веб-приложение для просмотра и фильтрации квартир, реализованное на Nuxt 3, TypeScript и Pinia. Проект демонстрирует современные подходы к фронтенд-разработке, включая адаптивную и кроссбраузерную верстку, сохранение состояния фильтров, работу с локальными данными и доступность.
 
-Make sure to install dependencies:
+## Стек технологий
+- **Nuxt 3** — современный фреймворк на базе Vue 3
+- **TypeScript** — строгая типизация
+- **Pinia** — хранилище состояния с поддержкой persist
+- **SASS** — препроцессор для стилей
+- **PT Root UI** — уникальный шрифт
+- **BEM** — методология именования классов
+- **Git** — система контроля версий
 
-```bash
-# npm
-npm install
+## Основные возможности
+- Адаптивная верстка для брейкпоинтов 960px и 1440px
+- Максимальная ширина контентной части — 1440px, центрирование на широких экранах
+- Кроссбраузерная поддержка (Chrome, Edge, Safari)
+- Семантическая и доступная верстка
+- Фильтрация квартир по параметрам (комнаты, цена, площадь)
+- Сортировка по площади, этажу, цене
+- Кнопка "Наверх" с плавной прокруткой
+- Подгрузка данных по кнопке "Показать ещё"
+- Сохранение состояния фильтра и сортировки при перезагрузке страницы
+- Локальный сервер с данными (`server/routes/apartments.json.ts`)
 
-# pnpm
-pnpm install
+## Установка и запуск
 
-# yarn
-yarn install
+1. Клонируйте репозиторий:
+   ```sh
+   git clone https://github.com/yulya-vovk/realty-test.git
+   cd realty-test
+   ```
+2. Установите зависимости:
+   ```sh
+   npm install
+   ```
+3. Запустите проект:
+   ```sh
+   npm run dev
+   ```
+4. Откройте [http://localhost:3000](http://localhost:3000) в браузере.
 
-# bun
-bun install
+## Структура проекта
+```
+app/                # Основные компоненты и страницы
+public/fonts/        # Уникальные шрифты PT Root UI
+server/routes/       # Локальный сервер с данными квартир
+nuxt.config.ts       # Конфигурация Nuxt
+package.json         # Зависимости и скрипты
 ```
 
-## Development Server
+## Доступность и оптимизация
+- Используются aria-атрибуты, role, tabindex
+- Все интерактивные элементы доступны с клавиатуры
+- Оптимизация изображений и lazy loading
+- Минимизация стилей и кода
 
-Start the development server on `http://localhost:3000`:
+## Контакты
+- Автор: [yulya-vovk](https://github.com/yulya-vovk)
+- Telegram: @yulya_vovk
 
-```bash
-# npm
-npm run dev
+---
 
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+**Для тестирования и оценки:**
+- Все данные берутся из локального JSON (`server/routes/apartments.json.ts`)
+- Бэкенд не требуется — только фронтенд и локальный сервер Nuxt
+- Для проверки адаптива используйте DevTools браузера
